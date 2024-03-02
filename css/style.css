@@ -3,11 +3,17 @@
     src: url(../assets/fonts/Cattyla.ttf);
 }
 
+body{
+    height: 100vh;
+    width: 100%;
+}
+
 header{
     text-align: center;
     background-color: #ffcf77;
     padding: 10px;
     color: #fffcf0;
+    height: auto;
 }
 
 .logo{
@@ -25,7 +31,7 @@ h1{
 }
 
 .arbol-header{
-    width: 20%;
+    width: 250px;
     position: absolute;
     right: 0;
     opacity: 50%;
@@ -33,17 +39,18 @@ h1{
 
 main{
     background-color: #fffcf0;
-    font-family: 'Josefine Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     margin: 0 auto;
     display: flex;
     padding: 3em;
+    height: 65%;
 }
 
 .encriptador{
     width: 60%;
     margin: 0 auto;
-    height: 300px;
+    height: 100%;
 }
 
 .div-encriptador, .div-mensaje{
@@ -54,12 +61,13 @@ main{
     background-color: #fffcf0;
     border-radius: 25px 0;
     box-shadow:10px -10px 0px #ffcf77, -10px 10px 0px #ffcf77;
+    height: 70%;
 }
 
 .resultado{
     width: 40%;
     margin: 0 auto;
-    height: 300px;
+    height: 100%;
 }
 
 .texto-area{
@@ -114,20 +122,52 @@ button:active{
 
 footer{
     background-color: #ffcf77;
+    text-align: center;
+    height: 125px;
+    font-size: 0.9em;
+    color: rgb(23, 23, 23);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .arbol-footer{
-    width: 20%;
+    width: 250px;
     opacity: 50%;
+    position: absolute;
+    left: 0;
 }
 
-@media screen and (max-width:480px) {
+footer p{
+    padding-top: 2em;
+
+}
+
+footer a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #fffcf0;
+    text-shadow: 1px 1px 1px black;
+}
+
+footer a:visited{
+    color: #fffd8f;
+}
+
+footer p:first-of-type{
+    font-size: 1.1em;
+}
+@media screen and (max-width:573px) {
+    body{
+        height: 100%;
+    }
+
     main{
-        display: inline-block;
+        display: block;
+        height: 100%;
     }
 
     .resultado, .encriptador{
         width: 100%;
+        height: 300px;
     }
 
     button{
@@ -137,4 +177,11 @@ footer{
     .resultado{
         margin-top: 5em;
     }
+}
+
+@media screen and (max-width:880px) {
+    .arbol-header, .arbol-footer{
+        visibility: hidden;
+    }
+
 }
