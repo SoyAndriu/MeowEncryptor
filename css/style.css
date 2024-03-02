@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'gato';
+    src: url(../assets/fonts/Cattyla.ttf);
+}
+
+header{
+    text-align: center;
+    background-color: #ffcf77;
+    padding: 10px;
+    color: #fffcf0;
+}
+
+.logo{
+    width: 100px;
+    filter: drop-shadow(3px 5px 3px black);
+}
+
+h1{
+    font-family: 'gato', sans-serif;
+    display: inline-block;
+    font-size: 3.5em;
+    position: relative;
+    bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.arbol-header{
+    width: 20%;
+    position: absolute;
+    right: 0;
+    opacity: 50%;
+}
+
+main{
+    background-color: #fffcf0;
+    font-family: 'Josefine Sans', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    padding: 3em;
+}
+
+.encriptador{
+    width: 60%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.div-encriptador, .div-mensaje{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fffcf0;
+    border-radius: 25px 0;
+    box-shadow:10px -10px 0px #ffcf77, -10px 10px 0px #ffcf77;
+}
+
+.resultado{
+    width: 40%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.texto-area{
+    border-color: #ffcf77;
+    border-radius: 10px 0;
+    resize: none;
+    background: transparent;
+    text-transform: lowercase;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+}
+
+.instrucciones{
+    padding: 20px 0 10px;
+    font-size: 1.2em;
+}
+
+button{
+    font-family: 'gato', sans-serif;
+    color: #fffcf0;
+    font-weight: 200;
+    border: 2px solid #7a6339;
+    background-color: rgb(253, 189, 71);
+    border-radius: 10px 0;
+    padding: 5px 10px;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: 200ms;
+    text-shadow: 1px 1px 1px black;
+}
+
+button:hover{
+    background-color: #ffcf77;
+    font-size: 1.7em;
+    
+}
+
+button:active{
+    background-color: #fffd8f;
+    font-size: 1.7em;
+    
+}
+
+.btn-desencriptar{
+    background-color: #a38244;
+    border: 2px solid #7a6339;
+}
+
+
+
+footer{
+    background-color: #ffcf77;
+}
+
+.arbol-footer{
+    width: 20%;
+    opacity: 50%;
+}
+
+@media screen and (max-width:480px) {
+    main{
+        display: inline-block;
+    }
+
+    .resultado, .encriptador{
+        width: 100%;
+    }
+
+    button{
+        margin: 0 0 1em;
+    }
+
+    .resultado{
+        margin-top: 5em;
+    }
+}
