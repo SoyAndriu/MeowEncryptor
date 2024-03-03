@@ -71,7 +71,7 @@ main{
 }
 
 #texto-devuelto{
-    background-image: url(../assets/images/gatosDurmiendo.svg);
+    background: url(../assets/images/gatosDurmiendo.svg);
     background-repeat: no-repeat;
     background-size: 60vh;
     background-position: center;

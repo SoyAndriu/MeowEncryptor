@@ -19,19 +19,40 @@ let codigoDesencriptacion = [
 
 function btnEncriptar() {
     let texto =  encriptado(textoUsuario.value);
-    textoDevuelto.value = texto;
-    cambiarFondo;
+
+    cambiarFondo();
+    if(textoUsuario.value == ""){
+        textoDevuelto.placeholder = "¡Necesitas escribir algo para encriptar!";
+    } else {
+        textoDevuelto.value = texto;
+        textoUsuario.value = "";
+    }
 };
 
 function btnDesencriptar(){
     let textoEncriptado = desencriptado(textoUsuario.value);
+
+    cambiarFondo();
+    if(textoUsuario.value == ""){
+        textoDevuelto.placeholder = "¡Necesitas escribir algo para desencriptar!";
+    } else {
     textoDevuelto.value = textoEncriptado;
-}
+    textoUsuario.value = "";
+    }
+};
 
 function btnCopiar(){
     let textoCopiado = textoDevuelto.value;
+
+    cambiarFondo();
+    if(textoCopiado == ""){
+        textoDevuelto.placeholder = "¡No hay nada para copiar!";
+    } else {
     navigator.clipboard.writeText(textoCopiado);
-}
+    textoDevuelto.value = "";
+    textoDevuelto.placeholder = "¡Copiado al portapapeles!";
+    }
+};
 
 function encriptado(fraseEncriptada) {
     for (let index = 0; index < codigoEncriptacion.length; index++) {
@@ -58,5 +79,5 @@ function desencriptado(fraseDesencriptada) {
 };
 
 function cambiarFondo(){
-    textoDevuelto
-}
+    textoDevuelto.style.background = "none";
+};
